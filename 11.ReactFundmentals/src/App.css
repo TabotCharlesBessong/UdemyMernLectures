@@ -1,0 +1,12 @@
+
+.App{
+  width: 100%;
+}
+
+h1{
+  font-family: serif;
+  font-size: 3rem;
+  color: #118686;
+  text-align: center;
+  text-transform: uppercase;
+}
