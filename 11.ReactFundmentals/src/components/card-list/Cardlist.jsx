@@ -1,14 +1,17 @@
 
 
 import React from 'react'
-import 'cardlist.css'
+import Card from '../card/Card'
+import './cardlist.css'
 
 const Cardlist = (props) => {
-  // const {name} = props
   return (
     <>
-       {/* <div>Cardlist</div> */}
-    <h1 className='card-list' >{props.children}</h1>
+    <div  className="card-list">
+      {props.monsters.map(monster =>(
+        <Card key={monster.id} monster={monster}  />
+        ) )}
+    </div>
     </>
     
   )
