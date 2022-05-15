@@ -24,6 +24,7 @@
     "google-maps-react": "^2.0.6",
     "i18next": "^21.6.13",
     "moment": "^2.29.1",
+    "postcss-loader": "^6.2.1",
     "react": "^17.0.2",
     "react-datepicker": "^4.6.0",
     "react-dom": "^17.0.2",
@@ -36,6 +37,9 @@
     "recharts": "^2.1.9",
     "redux": "^4.1.2",
     "redux-thunk": "^2.4.1",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.51.0",
+    "sass-loader": "^12.6.0",
     "styled-components": "^5.3.3",
     "web-vitals": "^1.1.2",
     "yup": "^0.32.11"
@@ -45,8 +49,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy":"npm build",
-    "deploy":"gh-pages -d build"
+    "predeploy": "npm build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
