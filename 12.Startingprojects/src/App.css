@@ -3,6 +3,10 @@
   width: 100%;
 }
 
+body{
+  font-family: 'Courier New', Courier, monospace;
+}
+
 h1{
   font-family: serif;
   font-size: 3rem;
