@@ -6,8 +6,28 @@ import Shop from './pages/shop/Shop'
 import Header from './components/header/Header'
 import './App.css'
 import Form from './pages/form/Form'
+import { auth } from './firebase/firebase'
 
 export default class App extends Component {
+  constructor(){
+    super()
+
+    this.state = {
+      currentUser : null
+    }
+  }
+
+  unsubscribeFromAuth = null
+  componentDidMount(){
+    this.unsubscribeFromAuth =  auth.onAuthStateChanged(user =>{
+      this.setState({currentUser:user})
+      console.log(user)
+    } )
+  }
+
+  componentWillUnmount(){
+    this.unsubscribeFromAuth()
+  }
   render() {
     return (
       <div className='App' >
