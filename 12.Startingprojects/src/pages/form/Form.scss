@@ -1,1 +1,12 @@
+.form {
+  width: 850px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px auto;
+  flex-wrap: wrap;
+  margin: 30px auto;
+  // display: grid;
+  // grid-template-columns: repeat(1fr,1fr);
+}
 
