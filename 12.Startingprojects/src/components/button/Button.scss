@@ -15,11 +15,21 @@
   border: none;
   cursor: pointer;
   padding: 10px 15px;
-  margin: 5px;
+  // margin: 5px;
 
   &:hover {
     background-color: white;
     color: black;
     border: 1px solid black;
+  }
+
+  &.google-sign-in{
+    background-color: #4285f4;
+    color: #fff;
+    border: none;
+    &:hover{
+      background-color: #214072;
+      // color: #0d2f66;
+    }
   }
 }
