@@ -9,8 +9,8 @@ const Preview = ({title,items}) => {
       <h1> {title.toUpperCase()}  </h1>
       <div className="preview">
         {
-          items.filter((item,idx) => idx < 4 ).map(({id , ...itemProps}) => (
-            <CardItem key={id} {...itemProps} />
+          items.filter((item,idx) => idx < 4 ).map((item) => (
+            <CardItem key={item.id}item={item} />
           )  )
         }
       </div>
