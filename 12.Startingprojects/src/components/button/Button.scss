@@ -14,8 +14,10 @@
   font-weight: bolder;
   border: none;
   cursor: pointer;
-  padding: 10px 15px;
+  // padding: 10px 15px;
   margin: 5px;
+  display: flex;
+  justify-content: center;
 
   &:hover {
     background-color: white;
@@ -30,6 +32,16 @@
     &:hover{
       background-color: #214072;
       // color: #0d2f66;
+    }
+  }
+  &.inverted{
+    color: #fff;
+    background-color: #222;
+    border: 1px solid 222;
+    &:hover{
+      color: #222;
+      background-color: #fff;
+      border: 1px solid fff;
     }
   }
 }
