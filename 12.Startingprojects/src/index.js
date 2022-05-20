@@ -1,17 +1,18 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-// import './index.css'
-import App from './App'
-import 'sass-loader/dist/cjs.js'
-import 'postcss-loader/dist/cjs.js'
-import {BrowserRouter as Router} from 'react-router-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+
+import store from './redux/store';
+
+// import './index.css';
+import App from './App';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Router>
+  <Provider store={store}>
+    <BrowserRouter>
       <App />
-     
-    </Router>
-  </React.StrictMode>,
+    </BrowserRouter>
+  </Provider>,
   document.getElementById('root')
-)
+);
