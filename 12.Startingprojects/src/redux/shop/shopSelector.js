@@ -17,10 +17,10 @@ export const selectShopSection = createSelector(
   shop => shop.data
 )
 
-export const selectCollection = (collectionUrlParam) => {
+export const selectCollection = collectionUrlParam => {
   createSelector(
-    [selectCollection],
+    [selectShopSection],
     collections => collections.find( collection => collection.id === collectionIdMap[collectionUrlParam])
 
   )
-  }
+}
