@@ -2,11 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-import CollectionPreview from '../collection-preview/collection-preview.component';
+import CollectionPreview from '../collection-preview/CollectionPreview';
 
-import { selectCollectionsForPreview } from '../../redux/shop/shop.selectors';
+import { selectCollectionsForPreview } from '../../redux/shop/shopSelector';
 
-import './collections-overview.styles.scss';
+import './collectionsOverview.scss';
 
 const CollectionsOverview = ({ collections }) => (
   <div className='collections-overview'>
