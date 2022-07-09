@@ -6,7 +6,8 @@ const collectionIdMap = {
   sneakers:2,
   jackets:3,
   womens:4,
-  mens:5
+
+  mens:5 
 }
 
 const selectShop = state => state.shop 
@@ -16,9 +17,10 @@ export const selectShopSection = createSelector(
   shop => shop.data
 )
 
-export const selectcollection = (collectionUrlParam) =>{
+export const selectCollection = collectionUrlParam => {
   createSelector(
-    [selectcollection],
-    collections => collections.find(collection => collection.id === collectionIdMap[collectionUrlParam] )
+    [selectShopSection],
+    collections => collections.find( collection => collection.id === collectionIdMap[collectionUrlParam])
+
   )
 }
