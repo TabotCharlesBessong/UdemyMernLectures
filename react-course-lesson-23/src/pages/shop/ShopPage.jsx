@@ -6,8 +6,16 @@ import {connect} from 'react-redux';
 import CollectionsOverview from '../../components/collections-overview/CollectionsOverview';
 import CollectionPage from '../collection/Collection';
 import { updateCollections } from '../../redux/shop/shopActions';
+import WithSpinner from '../../components/withSippner/WithSpinner'; 
+
+const CollectionsOverviewWithSpinner = WithSpinner(CollectionsOverview);
+
+const CollectionPageWithSpinner = WithSpinner(CollectionPage)
 
 class  ShopPage extends Component {
+  state = {
+    loading: true,
+  }
   unsubscribeFromSnapshot = null;
   componentDidMount() {
     const {updateCollections} = this.props 
@@ -16,14 +24,16 @@ class  ShopPage extends Component {
       // console.log(snapshot.docs.map(doc => doc.data()));
       const collectionsMap =   convertCollectionsSnapshotToMap(snapshot);
       updateCollections(collectionsMap)
+      this.setState({loading: false}) // this is to stop the spinnerOverlay from showing up 
     })
   }
   render() {
     const { match } = this.props;
+    const {loading} = this.state
     return (
       <div className="shop-page">
-        <Route exact path={`${match.path}`} component={CollectionsOverview} />
-        <Route path={`${match.path}/:collectionId`} component={CollectionPage} />
+        <Route exact path={`${match.path}`} render={(props)=> <CollectionsOverviewWithSpinner isLoading={loading} {...props} />} />
+        <Route path={`${match.path}/:collectionId`} render={(props)=> <CollectionPageWithSpinner isLoading={loading} {...props} />} />
       </div>
     );
   }
