@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import FormInput from '../form-input/form-input.component';
-import CustomButton from '../custom-button/custom-button.component';
+import FormInput from '../form-input/FormInput';
+import CustomButton from '../custom-button/CustomButton';
 
 import {
   googleSignInStart,
@@ -13,7 +13,7 @@ import {
   SignInContainer,
   SignInTitle,
   ButtonsBarContainer
-} from './sign-in.styles';
+} from './SignInStyles';
 
 class SignIn extends React.Component {
   constructor(props) {

@@ -10,7 +10,7 @@ import {
   BackgroundImage,
   NameContainer,
   PriceContainer
-} from './collection-styles.styles';
+} from './CollectionItemStyles';
 
 const CollectionItem = ({ item, addItem }) => {
   const { name, price, imageUrl } = item;

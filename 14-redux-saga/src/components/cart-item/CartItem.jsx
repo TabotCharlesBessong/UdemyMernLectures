@@ -4,7 +4,7 @@ import {
   CartItemContainer,
   ItemDetailsContainer,
   CartItemImage
-} from './cart-item.styles';
+} from './CartItemStyles';
 
 const CartItem = ({ item: { imageUrl, price, name, quantity } }) => (
   <CartItemContainer>

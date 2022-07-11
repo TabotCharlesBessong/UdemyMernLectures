@@ -13,7 +13,7 @@ import {
   TextContainer,
   QuantityContainer,
   RemoveButtonContainer
-} from './checkout-item.styles';
+} from './CheckoutItemStyles';
 
 const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
   const { name, imageUrl, price, quantity } = cartItem;

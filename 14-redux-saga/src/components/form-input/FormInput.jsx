@@ -4,7 +4,7 @@ import {
   GroupContainer,
   FormInputContainer,
   FormInputLabel
-} from './form-input.styles';
+} from './FormInputStyles';
 
 const FormInput = ({ handleChange, label, ...props }) => (
   <GroupContainer>
